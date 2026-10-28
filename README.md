@@ -60,6 +60,7 @@ Cần cấu hình `MONGODB_URI`, `DB_NAME`, `PORT` trong file `backend/.env`. Kh
 - **Docker Backend:** https://hub.docker.com/r/tuphuoc/backend
 - **Docker Frontend:** https://hub.docker.com/r/tuphuoc/frontend
 - **Render Backend:** https://api-234753.onrender.com
-
+- **Render Frontend:** https://web-234753.onrender.com
+- **MongoDB Atlas:** Database 234753_TuLePhuoc, Collection books
 ## 8. Kết luận
 Hệ thống quản lý sách sử dụng React, Node.js, MongoDB Atlas và Docker, được triển khai trên nền tảng điện toán đám mây Render.
