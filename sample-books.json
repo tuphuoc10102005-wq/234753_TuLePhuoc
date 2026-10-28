@@ -1,0 +1,5 @@
+[
+  {"bookId":"S001","title":"Điện toán đám mây căn bản","author":"Nguyễn Minh Khang","category":"Công nghệ","publisher":"NXB Giáo dục","publishYear":2024,"isbn":"9786040000001","quantity":12,"description":"Giới thiệu các mô hình dịch vụ đám mây."},
+  {"bookId":"S002","title":"Lập trình React thực hành","author":"Trần Thu Hà","category":"Lập trình","publisher":"NXB Thông tin và Truyền thông","publishYear":2023,"isbn":"9786040000002","quantity":8,"description":"Hướng dẫn xây dựng giao diện React."},
+  {"bookId":"S003","title":"Cơ sở dữ liệu MongoDB","author":"Lê Quốc Bảo","category":"Cơ sở dữ liệu","publisher":"NXB Khoa học và Kỹ thuật","publishYear":2025,"isbn":"9786040000003","quantity":15,"description":"Thực hành lưu trữ và truy vấn dữ liệu NoSQL."}
+]
