@@ -25,7 +25,7 @@ function App() {
     try{const r=await fetch(`/api/books/${b._id}`,{method:'DELETE'});const d=await r.json();if(!r.ok)throw new Error(d.message);setMessage('Đã xóa sách');setError('');await load(search);}
     catch(e){setError(e.message);}
   };
-  return <main><header><div><small>ĐIỆN TOÁN ĐÁM MÂY • MSSV 234753</small><h1>📚 Hệ thống quản lý sách</h1><p>Sinh viên: TuLePhuoc · React + Express + MongoDB Atlas</p></div><button onClick={openAdd}>+ Thêm sách</button></header>
+  return <main><header><div><small>ĐIỆN TOÁN ĐÁM MÂY - MSSV 234753</small><h1> Hệ thống quản lý sách</h1><p>Sinh viên: TuLePhuoc</p></div><button onClick={openAdd}>+ Thêm sách</button></header>
   <section className="panel"><div className="toolbar"><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="🔎 Tìm theo tên, tác giả, thể loại..."/><span>{books.length} cuốn sách</span></div>
   {message&&<p className="success">{message}</p>}{error&&<p className="error">{error}</p>}
   {loading?<p>Đang tải dữ liệu...</p>:<div className="scroll"><table><thead><tr><th>Mã sách</th><th>Tên sách</th><th>Tác giả</th><th>Thể loại</th><th>Số lượng</th><th>Thao tác</th></tr></thead><tbody>{books.map(b=><tr key={b._id}><td>{b.bookId}</td><td><strong>{b.title}</strong></td><td>{b.author}</td><td>{b.category}</td><td>{b.quantity}</td><td className="actions"><button onClick={()=>setDetail(b)}>Xem</button><button onClick={()=>openEdit(b)}>Sửa</button><button className="danger" onClick={()=>remove(b)}>Xóa</button></td></tr>)}{!books.length&&<tr><td colSpan="6">Chưa có sách nào</td></tr>}</tbody></table></div>}</section>
