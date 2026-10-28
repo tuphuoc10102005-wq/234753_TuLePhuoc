@@ -1,14 +1,20 @@
+
 server {
-  listen 80;
-  server_name _;
-  root /usr/share/nginx/html;
-  index index.html;
-  location /api/ {
-    proxy_pass ${BACKEND_URL};
-    proxy_set_header Host $proxy_host;
-    proxy_set_header X-Real-IP $remote_addr;
-  }
-  location / {
-    try_files $uri $uri/ /index.html;
-  }
+    listen 80;
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location /api/ {
+        proxy_pass ${BACKEND_URL};
+        proxy_ssl_server_name on;
+        proxy_ssl_name api-234753.onrender.com;
+        proxy_set_header Host api-234753.onrender.com;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
 }
